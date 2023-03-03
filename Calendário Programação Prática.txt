@@ -1,0 +1,303 @@
+﻿
+Disciplina: Programção Prática
+
+Professor: André Duarte Bueno
+
+
+
+
+Data: 20/09/2013
+
+================
+
+Apresentacao disciplina
+
+Exercicio 01: Calcular raízes de uma equação do segundo grau 
+Entrada e saida
+Uso de funcoes
+
+
+Exercicio 02: Criar vetor de dimensao 1000, dar valores aleatorios e ordena-lo
+
+Uso de vetores e estruturas de repeticao e de controle.
+
+
+Exercicio 03: (Criar matriz 2D (nx=640, ny=480), preencher cada casa com valor da função )
+          f(x,y)=ax²+by²+cxy, salvar em formato PGM e visualizar com display.
+
+Uso de arquivos de disco, uso de programas externos, uso de arquivos com formatos pre-definidos.
+
+
+
+
+Data: 27/09/2013
+
+================
+
+Exercicio 04: Criar classes CFuncao2G e CIntegralTrapezio
+Implementacao de classes, atributos e metodos.
+
+
+Exercicio 05: Adicionar funcao main que usa CFuncao2G e CIntegralTrapezio
+Uso de classes para criar objetos, uso dos objetos.
+
+
+Exercicio 06: Adicionar construtores e CIntegralSimpson herdeira de CIntegralTrapezio, atualizar main
+Uso de construtores e de heranca simples.
+
+- Monte o exemplo com cuidado, deixando-o num padrão uniforme com os outros exemplos implementados, de forma a ir montando uma biblioteca própria de métodos numéricos.
+
+
+
+
+
+Data: 04/10/2013
+
+================
+
+Exercicio 07: Adicionar classes bases CFuncao e CIntegral (mover atributos para classes base quando pertinente)
+
+Uso de classes base; definicao de acesso publico, protegido e privado.
+
+
+Exercicio 08: Adicionar as duas hierarquias metodos virtuais e usar polimorfismo dentro de main
+
+Uso de metodos virtuais; uso de ponteiros; uso de polimorfismo.
+
+
+Exercicio 09: Criar classe CFuncao3G, herdeira de CFuncao2G; procurar e implementar integracao por quadratura-gaussiana.
+
+Reforco de conceitos. Uso de herança e polimorfismo.
+
+
+
+
+
+Data: 11/10/2013
+
+================
+
+Exercicio 10: Dentro de main usar a classe CGnuplot para plotar as funcoes criadas pelo usuario.
+
+Uso de classes externas, desenvolvidas por terceiros.
+
+
+Exercicio 11: Implementar sobrecarga do operador+ para somar funcoes(dadas duas funcoes retorna uma nova);
+
+Uso de sobrecarga de operador.
+
+
+
+
+Data: 18/10/2013
+
+================
+
+Exercicio 12: Para classes CFuncao implementar sobrecarga: double operator(double x); que calcula e retorna o valor da funcao.
+
+Para classe CIntegral implementar sobrecargas: 
+double operator(double limInf,double limSup, CFuncao*);
+double operator(CFuncao*);  
+
+Reforço do conceito desobrecarga de operador.
+
+
+Exercicio 13: Implementar classe CPolinomio que representa um polinomio de grau n;
+
+A classe deve ter um vetor de coeficiente c; Um método que retorna a derivada do polinômio;
+
+Um método que retorna a integral do polinômio; Um método que calcula o valor de y(double Y(double x);)
+
+Deve ter construtor default(CPolinomio p1;), construtor de cópia(CPolinomio p2(p1);), 
+construtor sobrecarregado (CPolinomio p3(coeficientes);). 
+
+- Deve ter método Coeficientes(..) para retornar e setar os coeficientes;
+
+- Deve ter sobrecarga double operator(double x); que deve receber x e retornar y;
+exemplo: double y = p1(x);
+
+- Deve ter sobrecarga operator+, permitindo p3 = p2 + p1;
+
+- Deve ter um método double Area(double limInf, double limSup, int n); que calcula a integral numérica usando
+trapezio ou simpson ou gauss-seidel. 
+Note que como estes conceitos já foram implementados em exercícios anteriores, é possível criar um destes objetos para calcular a integral do polinômio. Reaproveitando códigos.
+
+- Criar na classe uma enumeração enum EIntegral {trapezio, simpson, gaussseidel};
+
+o usuário pode setar o valor desta enumeração, de forma que o calculo da integral irá considerar o método selecionado.
+void SetTipoIntegralNumerica(..); sendo .. um objeto da enumeração.
+
+- Modificar main(), incluindo plotar o polinomio, sua derivada e integral.
+Calcular integral numérica.
+
+
+- Implementação completa de um conceito amplamente conhecido e utilizado pelo engenheiro; e de polinômios, suas derivadas e integrais. 
+Reforço de conceitos de classe, atributos, métodos, construtores, destrutor, sobrecargas; 
+Uso de métodos já implementados (como CIntegral).
+
+
+
+
+
+Data: 25/10/2013
+
+================
+
+Exercicio 14:
+Resolver a prova da página 57 da apostila de provas distribuída em 28/agosto/2013 (Solver de funções).
+
+Note que já implementaram hierarquia de funções e de integrais, falta apenas a de solver.
+
+- Implementação de conceito amplamente conhecido e utilizado na engenharia, o objetivo é encontrar as raízes de uma equação.
+
+Note que os métodos mais simples, vistos em calculo numérico são implementados usando orientação a objeto.
+
+
+
+
+Data: 01/11/2013
+
+================
+
+Exercicio 15:
+Resolver a prova da página 237 da apostila de provas distribuída em 28/agosto/2013 
+Implementar classe para estatística básica: 
+
+- calcula média, desvio padrão, de um vetor de dados.
+
+Implementar classe para regressão linear; 
+
+- dado par de vetores, calcula regressão linear.
+
+
+Implementar classe para distribuição normal.
+
+- Dado valor de z, calcula f(z); 
+
+- Dado valor de z, calcula Area(z); da cauda a esquerda de z;
+
+- Dado valor da área, calcula z; 
+
+
+- Novamente apresenta-se exemplo de implementação de conceitos amplamente usados na engenharia; 
+neste caso conceitos de estatística. 
+Note que embora seja solicitada a implementação dos conceitos mais simples, como regressão linear e curva normal, pode-se expandir o exercício implementação regressões de grau maior; 
+além das curvas de Student e Chi-Quadrado.
+
+- Monte o exemplo com cuidado, deixando-o num padrão uniforme com os outros exemplos implementados, de forma a ir montando uma biblioteca própria de métodos numéricos.
+
+====================================================================================================
+
+Trabalho ProgPratica:  
+Entregar Especificação/Elaboração do projeto a ser desenvolvido.
+
+====================================================================================================
+
+
+
+
+Data: 08/11/2013
+
+================
+
+Exercicio 16:
+Resolver a prova da página 243 da apostila de provas distribuída em 28/agosto/2013 
+(dados de campo; CCilindro, CAmostra; CAmostraRochaReservatorio; main()).
+
+- Exemplo bem aplicado; mostra caso prático de coleta de amostras em campo e a implementação de programa para gerenciamento dos dados das amostras coletadas;
+
+
+
+
+
+Data: 15/11/2013
+
+================
+
+Exercicio 17:
+Resolver a prova da página 252 da apostila de provas distribuída em 28/agosto/2013 
+(emulador calculadora HP - uso do conceito de pilha).
+
+- Este exemplo mostra o uso de pilhas; a implementação do conceito de pilha de uma calculadora RPN da HP.
+
+Mostra ainda conceitos importantes da computação como endereçamento indireto (i.I), funções transcendentais; operações com pilha; leitura e armazenamento de dados na memória; 
+
+- Solicita a construção/uso de conceitos básicos da computação.
+Conceitos amplamente usados em engenharia.
+
+
+
+
+
+Data: 22/11/2013
+
+================
+
+Exercicio 18: 
+Resolver a prova da página 115 da apostila de provas distribuída em 28/agosto/2013 
+Aplicada engenharia; análise de dados em laboratório; uso de normas abnt/iso 
+- peneiras; 
+CTabelaPeneirasASTM; CAmostraAreia; CAnaliseGranulometrica; 
+CDistribuicaoProbabilidade (note que pode reaproveitar conceitos de CNormal); CAnaliseDistribuicaoAreiaGravelAreiaFormacao;
+
+
+- Mais um exemplo bem aplicado; que mostra processamento de amostras usando sistemas de peneiras;
+sistemas estes amplamente usados nos laboratórios de engenharia;
+
+Ilustra o conceito de peneira; o conceito de amostra; e conceitos aplicados como análise granulométrica e análise areias gravel-pack.
+
+
+
+====================================================================================================
+
+Trabalho ProgPratica:  
+Entregar Análise do projeto a ser desenvolvido.
+
+====================================================================================================
+
+
+
+
+Data: 06/12/2013
+
+================
+====================================================================================================
+
+Trabalho ProgPratica:  
+Entregar Projeto do Sistema e  Projeto Orientado a Objeto do sistema a ser desenvolvido.
+
+====================================================================================================
+
+
+
+
+Data: 20/12/2013
+
+================
+====================================================================================================
+
+Trabalho ProgPratica:  
+Entregar Implementação, Testes e Documentação do sistema a ser desenvolvido.
+
+Nesta data toda a documentação relativa ao sistema deve ser entregue em formato encadernado.
+
+====================================================================================================
+
+
+
+
+
+Data: 6-10/1/2014
+
+==================
+====================================================================================================
+
+Trabalho ProgPratica:  
+Semana de defesas.
+A defesa precisa ser marcada com 15 dias de antecedência.
+
+====================================================================================================
+
+
+
+

@@ -1,0 +1,403 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass book
+\begin_preamble
+\usepackage {graphicx}
+\usepackage {longtable}
+\usepackage {indentfirst}
+\renewenvironment{center}{\par\centering}{\par}
+\end_preamble
+\use_default_options false
+\master DocumentoMestre-Trabalho-ProgramacaoPratica.lyx
+\maintain_unincluded_children false
+\language brazilian
+\language_package default
+\inputencoding latin1
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement ph
+\paperfontsize 12
+\spacing onehalf
+\use_hyperref false
+\papersize a4paper
+\use_geometry true
+\use_amsmath 1
+\use_esint 0
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 0
+\index Índice
+\shortcut idx
+\color #008000
+\end_index
+\paperwidth 210mm
+\paperheight 297mm
+\leftmargin 30mm
+\topmargin 25mm
+\rightmargin 20mm
+\bottommargin 20mm
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lhead{
+\backslash
+thechapter
+\backslash
+space - Revisão Bibliográfica} 
+\backslash
+rhead{} 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Especificação
+\end_layout
+
+\begin_layout Standard
+Apresenta-se neste capítulo a concepção, a especificação do sistema a ser
+ modelado e desenvolvido.
+\end_layout
+
+\begin_layout Section
+Especificação do programa
+\end_layout
+
+\begin_layout Standard
+O projeto a ser desenvolvido consiste em um software que importe dados obtidos
+ através de testes de pressão a partir de arquivos .dat.
+ O programa realizará uma regressão linear semi-logaritimica entre a pressão
+ medida no poço versus o tempo, gerando gráficos com auxílio da classe externa
+ Gnuplot.
+ O usuário fornecerá através do arquivo .dat, valores iniciais de porosidade,
+ espessura do reservatório, viscosidade e fator volume de formação do fluido.
+ Através da visualização e interpretação dos gráficos gerados, o programa
+ terá como saída os valores de permeabilidade efetiva, pressão inicial,
+ raio externo do reservatorio, índice de produtividade, fator película de
+ formação e efeito de estocagem (caso estes ocorram), além dos gráficos
+ da variação da pressão no poço versus tempo.
+\end_layout
+
+\begin_layout Standard
+O desenvolvimento do programa será feito utilizando a linguagem de programação
+ C++, por se tratar de uma linguagem eficiente e possibilitar o reaproveitamento
+ de códigos já desenvolvidos.
+ Por se tratar de um programa científico, será utilizada uma interface em
+ modo texto, que permitirá a entrada e saída de dados de forma simplificada.
+\end_layout
+
+\begin_layout Section
+Casos de uso do programa
+\end_layout
+
+\begin_layout Standard
+Um caso de uso descreve um ou mais cenários de uso do software, exemplos
+ de uso, como o sistema interage com usuários externos (atores).
+ Ademais, ele deve representar uma seqüência típica de uso do programa (a
+ execução de determinadas tarefas-padrão).
+ Também deve representar as exceções, casos em que o usuário comete algum
+ erro, em que o sistema não consegue realizar as tarefas solicitadas.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="block" valignment="top" width="10cm">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Nome do caso de uso:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Cálculo de parâmetro do reservatório
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Resumo/descrição:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Determinação parâmetros do reservatório através de uma regressão linear
+ com os dados do teste de pressão.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Etapas: 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.
+ Importar dados do arquivo.dat.
+\end_layout
+
+\begin_layout Plain Layout
+2.
+ Fornecer dados do reservatorio.
+\end_layout
+
+\begin_layout Plain Layout
+3.
+ Fornecer dados do fluido.
+\end_layout
+
+\begin_layout Plain Layout
+4.
+ Gerar gráficos.
+\end_layout
+
+\begin_layout Plain Layout
+5.
+ Analisar resultados.
+\end_layout
+
+\begin_layout Plain Layout
+6.
+ Gerar gráfico Variação da Pressão x Tempo.
+\end_layout
+
+\begin_layout Plain Layout
+7.
+ Exibir resultados na tela e exportar para um arquivo .dat.
+\end_layout
+
+\begin_layout Plain Layout
+8.
+ Selecionar uma variável e definir um intervalo de variação para a mesma.
+\end_layout
+
+\begin_layout Plain Layout
+9.
+ Gerar novos resultados e analisar a interferência da variação nestes.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Cenários alternativos:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Um cenário alternativo envolve uma entrada errada do usuário (por exemplo,
+ valores de entrada da viscosidade, porosidade ou da altura do reservatório,
+ negativos).
+ O programa apresentará um bug quando valores que deveriam ser positivios
+ forem menores que zero.
+ Outro exemplo ocorre na entrada de dados para criação da função semi-logaritimi
+ca.
+ O programa apresentará um bug quando for determinar o logarítmo de -1.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Caso de uso do programa.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Diagrama de caso de uso geral do programa
+\end_layout
+
+\begin_layout Standard
+A Figura 2.1 demonstra como o usuário vai interagir com o programa, através
+ de ações simples.
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/Renan/Desktop/Trabalho Programação Prática/imagens/Figura2.1.png
+	scale 90
+	rotateAngle 90
+	rotateOrigin center
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Diagrama de caso de uso geral.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Diagrama de caso de uso específico do programa
+\end_layout
+
+\begin_layout Standard
+A Figura 2.2 exibe a interação do usuário com o programa, porém agora detalhando
+ a solicitação de variação de um determinado parâmetro.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/Renan/Desktop/Trabalho Programação Prática/imagens/Figura2.2.png
+	scale 90
+	rotateAngle 90
+	rotateOrigin center
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Diagrama de caso de uso específico.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
