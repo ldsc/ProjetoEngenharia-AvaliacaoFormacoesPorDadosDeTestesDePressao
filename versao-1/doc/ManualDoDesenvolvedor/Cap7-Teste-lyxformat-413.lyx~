@@ -1,0 +1,785 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass book
+\begin_preamble
+\usepackage {graphicx}
+\usepackage {longtable}
+
+\usepackage {indentfirst}
+\renewenvironment{center}{\par\centering}{\par}
+\end_preamble
+\use_default_options false
+\master DocumentoMestre-Trabalho-ProgramacaoPratica.lyx
+\maintain_unincluded_children false
+\language brazilian
+\language_package default
+\inputencoding latin1
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement p
+\paperfontsize 12
+\spacing onehalf
+\use_hyperref false
+\papersize a4paper
+\use_geometry true
+\use_amsmath 1
+\use_esint 0
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 0
+\index Índice
+\shortcut idx
+\color #008000
+\end_index
+\paperwidth 210mm
+\paperheight 297mm
+\leftmargin 30mm
+\topmargin 25mm
+\rightmargin 20mm
+\bottommargin 20mm
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter
+Teste
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lhead{
+\backslash
+thechapter-Teste} 
+\backslash
+rhead{
+\backslash
+thepage} 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Neste capítulo se apresenta os testes realizados para assegurar que o programa
+ esteja funcionando corretamente.
+\end_layout
+
+\begin_layout Section
+Teste 1: Teste no Windows
+\end_layout
+
+\begin_layout Standard
+O teste realizado no sistema operacional Windows 8 (plataforma onde foi
+ desenvolvida a maior parte do código do programa), com auxilio do compilador
+ 'Dev C++', teve como objetivo: Verificar se havia algum tipo de '
+\shape italic
+bug
+\shape default
+' no programa, se ele retornava os valores corretos dos parâmetros do reservatór
+io, e se os métodos condicionais do programa funcionariam, como uma entrada
+ de dados errada por parte do usuário e uma nova regressão linear caso o
+ fator de correlação não fosse satisfatório.
+ 
+\end_layout
+
+\begin_layout Standard
+Primeiramente, como mostra a Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:CapturaWindows2"
+
+\end_inset
+
+, o programa pede a seleção do sistema de unidades e a entrada dos parâmetros.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/Renan/Desktop/Trabalho Programação Prática/imagens/Figura7.2.png
+	scale 90
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Tela do programa mostrando a entrada de dados.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:CapturaWindows2"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Em seguida, como mostrado na Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:CapturaWindows3"
+
+\end_inset
+
+, o programa solicita os dados do registrador de pressão, e realiza a regressão
+ linear, exibindo o resultado na tela.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/Renan/Desktop/Trabalho Programação Prática/imagens/Figura7.3.png
+	scale 90
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Tela do programa mostrando seleção do arquivo de entrada, e posterior regressão
+ linear e o ajuste da curva.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:CapturaWindows3"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Após o a realização da regressão linear, o usuário pode solicitar a geração
+ do gráfico, como mostrado nas Figuras 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:CapturaWindows4"
+
+\end_inset
+
+ e 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:CapturaWindows4-1"
+
+\end_inset
+
+.
+ Os resultados são exibidos em tela, assim como podem ser exportados para
+ um arquivo .dat, com o nome escolhido pelo usuário.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/Renan/Desktop/Trabalho Programação Prática/imagens/Figura7.4.jpg
+	scale 90
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Tela do programa mostrando a possibilidade de geração do gráfico, a exportação
+ dos resultados para um arquivo de saída .dat, e a caracterização do reservatório.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:CapturaWindows4"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/Renan/Desktop/Trabalho Programação Prática/imagens/Figura7.5.jpg
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Gráfico de 
+\begin_inset Formula $Pws$
+\end_inset
+
+ vs.
+ 
+\begin_inset Formula $log[(Tp+\Delta t)/\Delta t]$
+\end_inset
+
+ gerado pelo Gnuplot.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:CapturaWindows4-1"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:CapturaWindows4-2"
+
+\end_inset
+
+ mostra a última etapa, onde o usuário pode realizar a variação de uma determina
+da variável.
+ Para isso, deve entrar com os valores inicial e final, além da quantidade
+ de intervalos em que deseja realizar tal variação.
+ Assim, o programa gera o resultado para todos os valores calculados e exporta
+ para um arquivo externo .dat automaticamente, como exibido na Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:CapturaWindows4-3"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/Renan/Desktop/Trabalho Programação Prática/imagens/Figura7.6.jpg
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Tela do programa mostrando a possibilidade de se variar um parâmetro, e
+ comparar os resultados, além de exportá-los para um arquivo externo.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:CapturaWindows4-2"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Todos os arquivos exportados são salvos no diretório onde se encontram as
+ listagens.
+ Como é destacado na Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:CapturaWindows4-3"
+
+\end_inset
+
+, os arquivos tem o nome dado pelo usuário, e na realização da variação,
+ o nome é automaticamente composto pelo nome escolhido pelo usuário, mais
+ o nome do parâmetro variado, e o valor de tal parâmetro.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/Renan/Desktop/Trabalho Programação Prática/imagens/Figura7.7.png
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Diretório onde se encontram as listagens e onde são salvos os arquivos de
+ saida (em destaque).
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:CapturaWindows4-3"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Teste 2: Teste no GNU/Linux (Gerando o gráfico com o Gnuplot)
+\end_layout
+
+\begin_layout Standard
+O teste realizado no sistema operacional Linux Fedora, com auxilio do editor
+ 'Kate' e dos comandos do terminal 
+\begin_inset Quotes eld
+\end_inset
+
+g++ *.cpp
+\begin_inset Quotes erd
+\end_inset
+
+ e 
+\begin_inset Quotes eld
+\end_inset
+
+./a.out
+\begin_inset Quotes erd
+\end_inset
+
+, teve como objetivo: verificar se havia algum tipo de 'bug' no programa
+ em outro sistema, mas principalmente se o gráfico iria ser gerado corretamente
+ pelo programa 
+\begin_inset Quotes eld
+\end_inset
+
+Gnuplot
+\begin_inset Quotes erd
+\end_inset
+
+.
+ A entrada de dados do fluido, do poço e da rocha é mostrada na Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:CapturaWindows4-7"
+
+\end_inset
+
+.
+ Os próximos passos, mostrados nas Figuras 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:CapturaWindows4-8"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:CapturaWindows4-9"
+
+\end_inset
+
+ e 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:CapturaWindows4-10"
+
+\end_inset
+
+foram idênticos aos feitos no teste no Windows.
+ Na Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:CapturaWindows4-11"
+
+\end_inset
+
+ há uma entrada equivocada (compressibilidade menor que 0), onde o programa
+ pede que seja reinformada a compressibilidade.
+ O mesmo processo ocorre em caso de erro na entrada dos demais parâmetros.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/Renan/Desktop/Trabalho Programação Prática/imagens/Figura7.8.png
+	scale 70
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Tela do programa mostrando a entrada de dados inicial.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:CapturaWindows4-7"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/Renan/Desktop/Trabalho Programação Prática/imagens/Figura7.9.png
+	scale 70
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Tela do programa mostrando seleção do arquivo de entrada, e posterior regressão
+ linear e o ajuste da curva.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:CapturaWindows4-8"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/Renan/Desktop/Trabalho Programação Prática/imagens/Figura7.10.png
+	scale 70
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Tela do programa mostrando a possibilidade de geração do gráfico, a exportação
+ dos resultados para um arquivo de saída .dat, e a caracterização do reservatório.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:CapturaWindows4-9"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/Renan/Desktop/Trabalho Programação Prática/imagens/Figura7.11.png
+	scale 70
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Gráfico de 
+\begin_inset Formula $Pws$
+\end_inset
+
+ vs.
+ 
+\begin_inset Formula $log[(Tp+\Delta t)/\Delta t]$
+\end_inset
+
+ gerado pelo Gnuplot.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:CapturaWindows4-10"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/Renan/Desktop/Trabalho Programação Prática/imagens/Figura7.12.png
+	scale 70
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Tela do programa mostrando a possibilidade de se variar um parâmetro, e
+ comparar os resultados, além de exportá-los para um arquivo externo.
+ Também é destacado a ação do programa pedindo ao usuário para reinformar
+ o valor da compressibilidade.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:CapturaWindows4-11"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
